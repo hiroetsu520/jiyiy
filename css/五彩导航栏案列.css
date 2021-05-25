@@ -1,0 +1,31 @@
+.div1 a{
+		display: inline-block;
+		text-decoration: none;
+		width: 120px;
+		height: 58px;
+		background-color: pink;
+		text-align: center;
+		line-height: 50px;
+		color: #FFF;
+	} 
+	.bg1{
+		background: url(../images/sucai/bg5.png);
+		background-repeat: no-repeat;
+	}
+	.div1 .bg1:hover {
+		background-image: url(../images/sucai/bg1.png);
+	}
+	.bg2{
+		background-image: url(../images/sucai/bg2.png);
+		background-repeat: no-repeat;
+	}
+	.bg3{
+		background-image: url(../images/sucai/bg3.png);
+		background-repeat: no-repeat;
+	}
+	.bg4{
+		background-image: url(../images/sucai/bg4.png);
+		background-repeat: no-repeat;
+	}
+	
+	

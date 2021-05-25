@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css背景</title>
+		<style>
+			/* 背景颜色 */
+			#div1{/* id选择器 */
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+			}
+			/* 背景图片 */
+			#div2{
+				width: 600px;
+				height: 780px;
+				background-image: url(https://www.woyoo.com/uploads/allimg/201204/112224HH-0.jpg);
+			}
+			/* 背景平铺 */
+			#div3{
+				width: 600px;
+				height: 600px;
+				background-color: pink;
+				background-image: url(../images/logo.png);
+				/* 1.背景平铺,默认情况下图片都是平铺的 */
+				/* background-repeat: repeat; */
+				/* 2.背景不平铺 */
+				background-repeat: no-repeat;
+				/* 3.背景图像在横向上平铺 */
+				/* background-repeat: repeat-x; */
+				/* 4.背景图像在纵向平铺 */
+				/* background-repeat: repeat-y; */
+			}
+			/* 背景位置 */
+			#div4{
+				width: 600px;
+				height: 600px;
+				background-color: pink;
+				background-image: url(../images/logo.png);
+				background-repeat: no-repeat;
+				background-position: center bottom;
+			}
+			/* 背景半透明 */
+			#div5{
+				width: 600px;
+				height: 600px;
+				background-color: #989796;
+				background: rgba(0,0,0,0.1);
+				background-image: url(../images/logo.png);
+				background-repeat: no-repeat;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>背景颜色</h1>
+		默认是transparent : 　背景色透明<br>
+		<div id="div1"></div>
+		<h1>背景图片</h1>
+		background-image。实际开发常见于logo或者一些装饰性的小图片或者是超大背景图片。<br>
+		优点是非常便于控制位置（精灵图也是一种运用场景）<br>
+		注意不要少了 url()<br>
+		<div id="div2"></div>
+		<h1>背景平铺</h1>
+		repeat : 　背景图像在纵向和横向上平铺<br>
+		no-repeat : 　背景图像不平铺<br>
+		repeat-x : 　背景图像在横向上平铺<br>
+		repeat-y : 　背景图像在纵向平铺 <br>
+		<div id="div3"></div>
+		
+		
+		<h1>背景位置（方位名词）</h1>
+		注意：也可以带精确单位<br>
+		如果指定的两个值是精确单位和方位名词混合使用，则第一个值是x坐标，第二个值是y坐标（其他基本也是一样）
+		<br>
+		<div id="div4">
+		</div>
+		<h1>背景滚动/固定</h1>
+		注意：背景图默认是滚动的（scroll）<br>
+		background-attachment <br>
+		scroll : 　背景图像是随对象内容滚动<br>
+		fixed : 　背景图像固定 <br>
+		语法：<br>
+		html { <br>
+			background-image: url("anasazi.png"); <br>
+			background-attachment: fixed; <br>
+			} <br>
+			
+			
+			<h1>背景半透明</h1>
+			<div id="div5">	背景半透明</div>
+			语法：background: rgba(0,0,0,0.1);<br>
+			1.最后一个参数时alpha透明度，取值范围时0-1之间<br>
+			2.我们习惯性的把0.1的0省略掉，写为background: rgba(0,0,0,.1);<br>
+			3.注意：背景半透明是指盒子背景半透明，盒子里的内容不受影响<br>
+			4.css3新增属性，是ie9+版本浏览器才支持的<br>
+			5.实际开发中我们不太关注兼容性写法了，可以放心使用<br>
+		<h1>背景符合写法</h1>
+		为了简化背景属性的代码，我们可以将这些属性合并简写在同一个属性background中。从而节约代码量。<br>
+		当使用简写属性时，没有特定的书写顺序，一般习惯为：<br>
+		background:背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置;<br>
+		<img src="../images/css背景总结.png" ><br>
+	</body>
+</html>

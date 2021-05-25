@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css基础选择器</title>
+		<style type="text/css">
+			/* 标签选择器:
+			选择HTML标签名 */
+			p{
+				/* 修改颜色 */
+				color: red;
+				/* 修改p标签字体大小 */
+				font-size: 20px;
+			}
+			div0{
+				font-size: 50px;
+			}
+			
+			/* 类选择器（class）:
+			想要差异化不同的标签，单独选择一个或者某几个标签，可以使用类选择器。 */
+			/* 类选择器口诀：样式点（.）定义，结构类（class）调用，一个或多个，开发最常用*/
+			/* id选择器跟类选择器的区别：
+			    类选择器(class)相当于人的名字，一个人可以有多个名字，同时一个名字也可以被多个人使用。
+				id选择器（#）相当于人的身份证号码，时全国唯一的，不能重复。 */
+			.red{
+				color: burlywood;
+				font-size: 40px;
+			}
+			/* 案列：使用选择器画三个盒子 */
+			.div1{
+				width: 100px;
+				height: 100px;
+				background-color: #FF0000;
+			}
+			.div2{
+				width: 100px;
+				height: 100px;
+				background-color: #DEB887;
+			}
+			
+			/* id选择器(#):
+			id选择器可以直接使用标有id的html元素标签 */
+			/* id选择器口诀：样式#定义，结构id调用，只能调用一次，别人勿使用。 */
+			/* id选择器跟类选择器的区别：
+			    类选择器(class)相当于人的名字，一个人可以有多个名字，同时一个名字也可以被多个人使用。
+				id选择器（#）相当于人的身份证号码，时全国唯一的，不能重复。 */
+			#div3{/* id选择器 */
+				color: #FF0000;/* 前景颜色 */
+				background-color: #00FFFF;/* 背景颜色 */
+				font-size: 15px;
+				width: 100px;/* 宽 */
+				height: 100px;
+			}
+			
+			/* 通配符选择器(*):使用*定义,它表示直接选取页面上所有元素(标签) */
+			/* 这里把所有的,HTMl,body,div,span,li等等都改为了红色 */
+			/* 			
+			*{
+				color: #00FFFF;
+			} */
+			/* css字体属性之文字样式 */
+			#div04{/* id选择器 */
+				/* 让文字倾斜 */
+				font-style: italic;
+			}
+			#div04{/* id选择器 */
+				/* 让倾斜的字体,不倾斜 */
+				font-style: normal;
+			}
+			/* 案列练习：想要div5字体倾斜，加粗，大小为20px 微软雅黑字体 */
+			#div5{/* id选择器 */
+				font-style: italic;/* 字体倾斜 */
+				font-weight: 700;/* 加粗 */
+				font-size: 20px;/* 字体大小 */
+				font-family: "microsoft yahei";/* 字体样式 */
+				color: #ffff7f;/* 字体颜色 */
+				width: 500px;/* 宽 */
+				height: 50px;/* 高 */
+				background-color: black;/* 背景颜色 */
+			}
+
+			/* css文本缩进 */
+			.div5{/* 类选择器(class) */
+				/* 文本第一行，缩进多少距离 */
+				/* text-indent: 20px; */
+				/* 可以是负数 */
+				/* 如果此时写了2em 则是缩进当前元素，两个文字大小，em是一个相对单位，就是当前元素font-size(字体大小)1个文字大小， */
+				text-indent: 2em;/* 文本第一行，缩进多少距离 */
+				font-size: 10px;/* 字体大小 */
+			}
+		</style>
+	</head>
+	<body>
+		<h1>选择器分类</h1>
+		选择器分为“基础选择器”和“复合选择器”两大类。<br>
+		基础选择器是由单个选择器组成的，<br>
+		基础选择器又包括：标准选择器、类选择器、id选择器、通配符选择器<br>
+		<h4>标签选择器：</h4>
+		标签选择器（元素选择器）是指用html标签名作为选择器。
+		<img src="images/css语法规范.png" ><br>
+		<p>这是一个p标签</p>
+		<div>这是一个div标签</div>
+		
+		<h4>类选择器：</h4>
+		类选择器口诀：样式点（.）定义，结构类（class）调用，一个或多个，开发最常用<br>
+		想要差异化不同的标签，单独选择一个或者某几个标签，可以使用类选择器。<br>
+		注意：在标签class中可以写多个类名，多个类名需要空格隔开，如<br>
+		class="div1 div2"<br>
+		多类名使用场景：可以把一些相同的标签元素放在一个类里面，方便修改
+		<br>
+		<ul>
+			<li class="red">类选择器</li>
+			<li>类选择器</li>
+			<li class="red">类选择器</li>
+		</ul>
+		
+		<h4>案列：使用选择器画三个盒子</h4>
+		<div class="div1">这是类选择器</div>
+		<div class="div2">这是类选择器</div>
+		<div class="div1">这是类选择器</div>
+		
+		<h4>id选择器</h4>
+		id选择器口诀：样式#定义，结构id调用，只能调用一次，别人勿使用。<br>
+		id选择器可以直接使用标有id的html元素标签<br>
+		css中id选择器以#来定义<br>
+		
+		<div id="div3">这是id选择器</div>
+		
+		<h4>id选择器跟类选择器的区别</h4>
+		类选择器(class)相当于人的名字，一个人可以有多个名字，同时一个名字也可以被多个人使用。<br>
+		id选择器（#）相当于人的身份证号码，时全国唯一的，不能重复。
+		
+		<h4>通配符选择器(*)</h4>
+		使用*定义,它表示直接选取页面上所有元素(标签)，能把所有的,HTMl,body,div,span,li等等都改成红色<br>
+		<img src="images/列表总结.png" ><br>
+		
+		<h1>css字体</h1>
+		css使用font-family来定义文本的字体系列。<br>
+		如：
+		p{
+			font-family:"微软雅黑","宋体";
+		}
+		<br>
+		div{
+			font-family:"microsoft yahei",arial
+		}
+		1.各种字体之间必须使用英文逗号隔开。<br>
+		2.一般情况下，如有空格隔开的多个单词组成的字体需要加引号。<br>
+		3.尽量使用系统自带的字体，保证所有用户能正常显示。<br>
+		4.可以使用中文。<br>
+		5.可以使用多个字体，浏览器会自动依次识别用户是否有安装该字体并使用。<br>
+		
+		<h1>css字体大小</h1>
+		css使用font-size属性定义字体大小<br>
+		如：
+		p{
+			font-size: 20px;
+			
+		}
+		1.px(像素)大小是我们网页最常用的单位<br>
+		2.谷歌浏览器默认文字大小是16px <br>
+		3.不同浏览器默认文字大小不一样，尽量给一个明确数值，不要使用默认大小<br>
+		4.可以给body（网页主体）指定整个页面文字大小。<br>
+		5.标题标签比较特殊，需要单独指定文字大小。<br>
+		
+		<h1>css字体粗细</h1>
+		css使用font-weight属性来设置文字粗细，
+		如：
+		p{
+			font-weight: 700;
+		}
+		<br>
+		p{
+			font-weight: 400;
+		}
+		<br>
+		实际开发中我们更提倡使用数字表示加粗或者变细，数字后面不用跟单位。		<br>
+		1.normal : 正常的字体。相当于number为400。声明此值将取消之前任何设置 		<br>
+		2.bold : 粗体。相当于number为700。也相当于b对象的作用 		<br>
+		3.bolder : IE5+　特粗体 		<br>
+		4.lighter : IE5+　细体 		<br>
+		5.number : IE5+　100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 		<br>
+		
+		<h1>css文字字体样式</h1>
+		如：
+		div4{
+			/* 让文字倾斜 */
+			font-style: italic;
+		}
+		<br>
+		div4{
+			/* 让倾斜的字体,不倾斜 (重点记住)*/
+			font-style: normal;
+		}
+		<br>
+		注意：我们平时很少我们平时很少给字体加斜体，反而要给斜体标签（em，i）改为不倾斜字体。<br>
+		
+		<h4>案列练习：想要div4字体倾斜，加粗，大小为20px 微软雅黑字体</h4>
+		<div id="div5">日常搏一搏，女神变老婆</div>
+		#div5{<br>
+			font-style: italic;/* 字体倾斜 */<br>
+			font-weight: 700;/* 加粗 */<br>
+			font-size: 20px;/* 字体大小 */<br>
+			font-family: "microsoft yahei";/* 字体样式 */<br>
+			color: #ffff7f;/* 字体颜色 */<br>
+			width: 500px;/* 宽 */<br>
+			height: 50px;/* 高 */<br>
+			background-color: black;/* 背景颜色 */<br>
+		}<br>
+		
+		<h1>css装饰文本</h1>
+			#p{<br>
+				/* id选择器 */<br>
+				text-decoration: underline ;/*下划线*/
+			}
+			a{<br>
+				/* 类选择器 */<br>
+				text-decoration: none ;/* 删除a标签（超链接）默认的下划线  重要*/
+			}<br>
+			参数： <br>
+			none : 　无装饰<br>
+			blink : 　闪烁<br>
+			underline : 　下划线<br>
+			line-through : 　贯穿线<br>
+			overline : 　上划线 <br>
+			 <h4>
+			 注意：<br>
+			 重点记住如何添加下划线（text-decoration: underline ;）<br>
+			 如何删除下划线（ext-decoration: none ;）<br>
+			 </h4>
+			 
+			 <h1>css文本缩进（可以使用负数）</h1>
+			 <p>跟12的标签选择器（html标签名）冲突（修改p标签字体大小）</p>
+			 如：<br>
+			 <p class="div5">文本第一行，缩进多少距离。文本第一行，缩进多少距离。文本第一行，缩进多少距离。文本第一行，缩进多少距离。文本第一行，缩进多少距离。
+			 文本第一行，缩进多少距离。</p>
+			 <p class="div5">文本第一行，缩进多少距离。文本第一行，缩进多少距离。文本第一行，缩进多少距离。文本第一行，缩进多少距离。文本第一行，缩进多少距离。
+			 文本第一行，缩进多少距离。</p>
+			 <p class="div5">文本第一行，缩进多少距离。文本第一行，缩进多少距离。文本第一行，缩进多少距离。文本第一行，缩进多少距离。文本第一行，缩进多少距离。
+			 文本第一行，缩进多少距离。</p>
+			 .div5{/* 类选择器(class) */<br>
+			 	/* 文本第一行，缩进多少距离 */<br>
+			 	/* text-indent: 20px; */<br>
+			 	/* 可以是负数 */<br>
+			 	/* 如果此时写了2em 则是缩进当前元素，两个文字大小，em是一个相对单位，就是当前元素font-size(字体大小)1个文字大小， */<br>
+			 	text-indent: 2em;/* 文本第一行，缩进多少距离 */<br>
+			 	font-size: 10px;/* 字体大小 */<br>
+			 }<br>
+			 
+			 <h1>css行间距</h1>
+			 line-height用户设置行间的距离（行高），可以控制文字与行之间的距离。<br>
+			 示例：   <br>
+			 div {line-height:6px; } <br>
+			 <img src="images/文本属性总结.png" ><br>
+			
+			<h1>css的三大样式表</h1>
+			<h4>1.行内样式表（行内式）</h4>
+			行内样式表（内联样式表）是在元素内部中的style属性中设定css样式。适用于简单的修改。<br>
+			如：<br>
+			(div style="color: #FF0000; font-weight: 700;">让字体加粗(/div)
+			<h4>2.内部样式表（嵌入式）</h4>
+			内部样式表（内嵌样式表）就是写到HTML内部，是将所有css代码抽取出来，单独放到 style 标签中。<br>
+			通过此方法可以方便控制整个页面中的元素样式设置<br>
+			<h4>3.外部样式表（链接式）</h4>
+			样式单独写到css文件中，之后把css文件引入到HTML页面中。在html中使用link标签引入css文件<br>
+			如：<br>
+			link rel="stylesheet" href="css文件路径"/><br>
+			注意，一般放在html页面头部。<br>
+			<img src="images/css外部引入方式.png" ><br>
+			<img src="images/css引入方式总觉.png" ><br>
+	</body>
+	
+</html>

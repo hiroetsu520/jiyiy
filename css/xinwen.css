@@ -1,0 +1,56 @@
+h1 {
+		text-align: center;
+		font-weight: 400;
+		/* 不加粗字体（正常的字体。相当于number为400） */
+	}
+
+	.center {
+		/* 类选择器 */
+		text-align: center;
+		/* 居中 */
+		color: #989796;
+		/* 字体颜色 */
+	}
+
+	a {
+		/* 标签选择器 */
+		text-decoration: none;
+		/* 清除a标签（超链）的默认下划线 */
+	}
+
+	.length {
+		/* 类选择器 */
+		text-indent: 2em;
+		/* 首行文本缩进2个字体（2em） */
+		font-size: 15px;
+		/* 文字大小 */
+	}
+
+	.bold {
+		/* 类选择器 */
+		font-family: "microsoft yahei";
+		/* 设置字体 */
+		font-weight: 700;
+		/* 字体加粗 */
+		font-size: 15px;
+		/* 字体大小 */
+	}
+
+	body {
+		/* 标签选择器 */
+		line-height: 28px;
+		/* 字体行高 */
+	}
+
+	#sousuo {
+		/* id选择器 */
+		color: #989796;
+		/* 修改文字颜色 */
+		width: 120px;
+		/* 文本框宽度 */
+	}
+
+	#btn {
+		font-weight: 700;
+		/* 文字加粗 */
+	}

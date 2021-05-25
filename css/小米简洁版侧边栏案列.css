@@ -1,0 +1,16 @@
+
+	a:hover{
+		background-color: #ff6f00;/* 鼠标放在目标变换背景颜色 */
+	}
+	a{
+		text-decoration: none;/* 取消a标签默认的下划线 */
+		font-size: 20px;/* 字体大小 */
+		display: block;/* 将a标签转换成块元素 */
+		color: aliceblue;/* 文字颜色 */
+		width: 348px;/* 宽 */
+		height: 60px;/* 高 */
+		text-indent: 2em;/* 文字缩进两个文字单位 */
+		background-color: #535759;/* 背景颜色 */
+		/* 让文字的行高等于盒子的行高，就可以让文字在盒子当中垂直居中。 */
+		line-height: 60px;/* 盒子高度 */
+	}

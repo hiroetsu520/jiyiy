@@ -1,0 +1,42 @@
+/* 后代选择器 */
+	ul li {
+		/* 后代选择器 */
+		color: #FF0000;
+	}
+
+	ul li a {
+		/* 后代选择器 */
+		color: #FFFF7F;
+	}
+
+	ol li {
+		color: blue;
+	}
+
+	.rod li a {
+		/* 类选择器 */
+		color: #00FFFF;
+	}
+
+	/* 子选择器 */
+	div>a {
+		/* 子选择器 */
+		color: #ffaa00;
+	}
+
+	/* 并集选择器 */
+	div,
+	p,
+	.ttp {
+		/* 跟后代选择器颜色冲突，懒得改 */
+		color: pink;
+	}
+	/* 链接伪类选择器 */
+	a:hover{/* 链接伪类选择器 */
+		color: #DEB887;
+	}
+	/* focus选择器 */
+	input:focus{
+		background-color: #FF0000;/* 背景颜色 */
+		color: #0000FF;/* 字体颜色 */
+	}

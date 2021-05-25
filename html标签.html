@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>html标签</title>
+	</head>
+	<body>
+		<h1>锚点链接（快速定位到当前页面的某一个位置）<br>
+		1 <a href="#one">文本格式化标签</a><br>
+		2 <a href="#two">div跟span标签</a><br>
+		3 <a href="#three">img图片标签</a><br>
+		4 <a href="#four">相对路劲</a><br>
+		5 <a href="#five">绝对路径</a><br>
+		6 <a href="#six">表格标签</a><br>
+		7 <a href="#seven">合并单元格</a><br>
+		8 <a href="#eight">列表标签</a><br>
+		9 <a href="#nine">表单标签</a>
+		
+		<h1 id="one">文本格式化标签</h1>
+		<a href="#top" target="_self">返回顶部</a>
+		<p>这是一个<b>加粗(b加粗标签)</b>文字</p>
+		<p>这是一个<strong>加粗(strong加粗标签)</strong>文字</p>
+		<p>这是一个<em>斜体（em斜体标签）</em>文字</p>
+		<p>这是一个<i>斜体</i>（i斜体标签）文字</p>
+		<p>这是一个<del>删除线（del标签）</del></p>
+		<p>这是一个<s>删除线(s标签)</s></p>
+		<p>这是一个<ins>下划线（ins标签）</ins></p>
+		<p>这是一个<u>下划线（u标签）</u></p>
+		
+		<h1 id="two">div跟span标签</h1>
+		<a href="#top" target="_self">返回顶部</a>
+		<div>这是一个div标签（独占一行）</div>
+		<div>这是一个div标签（独占一行）</div>
+		<div>这是一个div标签（独占一行）</div>
+		<br />
+		<span>这是一个span标签</span>
+		<span>这是一个span标签</span>
+		<span>这是一个span标签</span>
+		
+		<h1 id="three">img图片标签</h1>
+		<a href="#top" target="_self">返回顶部</a>
+		<img src="images/img.png" >
+		
+		<h1>alt：图片显示不出来的时候显示文字</h1>
+		<img src="images/img.png1" alt="图片加载失败...">
+		
+		<h1>border:给图像设定边框(15xp)</h1>
+		<img src="images/img.png" border="15xp">
+		
+		<h1>title：鼠标放在图片上显示内容</h1>
+		<img src="images/img.png" title="这是鼠标放在图片上显示的内容">
+		
+		<h1>width:修改图像宽度（400xp） height:修改图像高度(400xp)</h1>
+		<img src="images/img.png" alt="图片加载失败时显示" title="这是鼠标放在图片上显示的内容" width="400xp" height="400xp">
+		
+		<p>ps通常情况下只需要设置一个图片宽或者高即可。另外一个会自动进行等比列缩放,图片不会有太大失真。width宽为（400xp）</p>
+		<img src="images/img.png" alt="图片加载失败时显示" title="这是鼠标放在图片上显示的内容" width="400xp" border="15xp">
+		
+		<h1 id="four">相对路劲</h1>
+		<a href="#top" target="_self">返回顶部</a>
+		<h4>同级路劲</h4>
+		<img src="img.png1" alt="同级路径下没有找到此图像">
+		<h4>下一级路径	</h4>
+		<img src="images/img.png" title="这是鼠标放在图片上显示的内容"> 
+		<h4>上一级路径(../)</h4>
+		<img src="../images/img.png1" alt="上级路径没有找到此图像" title="这是鼠标放在图片上显示的内容">
+		
+		<h1 id="five">绝对路径</h1>
+		<a href="#top" target="_self">返回顶部</a><br>
+		<img src="https://img-nos.yiyouliao.com/inforec-20210515-a2f075f72b427edfbaba4e0e19fdfb03.jpg" title="这是鼠标放在图片上显示的内内容">
+		
+		<h1>外部链接(target的值为“_blank” 新窗口打开页面。默认当前窗口打开页面)</h1>
+		<a href="images/img2.jpg" target="_blank">新窗口打开图片</a>
+		<br>
+		<a href="images/img2.jpg">当前窗口打开图片</a>
+		<h1>内部链接（用于网站内部页面相互转跳，不需要加HTTP）</h1>
+		<a href="html标签.html">转跳内部链接（原网页）</a>
+		<h1>网页元素链接</h1>
+		<a href="http://baidu.com"><img src="./images/img.png" title="这是鼠标放在上面显示的内容"></a>	
+		
+		<h1 id="six" align="center">表格标签</h1>
+		<a href="#top" target="_self">返回顶部</a><br>
+		<table>
+			<tr>
+				<td>姓名</td> <td>性别</td> <td>年龄</td>
+			</tr>
+			<tr>
+				<td>test</td> <td>男</td> <td>56</td>
+			</tr>
+			<tr>
+				<tr><td>test2</td> <td>男</td> <td>56</td></tr>
+			</tr>
+			<tr>
+				<tr><td>test3</td> <td>男</td> <td>56</td></tr>
+			</tr>
+		</table>
+		
+		<h1>表头单元格-th（常用于表格第一行，突出重要性，表头单元格会加粗文字居中显示）</h1>
+		<p>
+		 属性名：align 属性值：left（左。默认为左） center（中） rigth（右）描述：表格对齐方式<br>
+		 属性名：border 属性值：1或"" 描述：属性值为空就默认不显示边框<br>
+		 属性名：cellpadding 像数值：X 描述：规定文字与单元格之间的空白，默认为1 <br>
+		 属性名：cellspacing 像素值：x 描述：规定单元格之间的空白，默认为2 <br>
+		 属性名：width 属性值：像素值或百分比值 描述：规定表格的宽度。<br>
+		 属性名：height 属性值：像素值或百分比值 描述：规定表格的高度。（可以不写）<br>
+		 表格结构标签：<br>
+		 thead：表格头部区域，双标签<br>
+		 tbody：表格主体区域，双标签<br>
+		 使用场景：因为表格可能过长，为了更好的分清表格结构，可以将表格分割成‘表格头部’跟‘表格主体’两大部分。
+		</p>
+		<table align="center" border="1" cellpadding="20" cellspacing="0" width="500" height="240">
+			<!-- border属性值为空就默认不显示边框。align属性值分别对应：left（左。默认为左） center（中） rigth（右）-->
+			<tr><th>姓名</th> <th>性别</th> <th>年龄</th></tr>
+			<tr><td>test</td> <td>男</td> <td>56</td></tr>
+			<tr><td>test2</td> <td>男</td> <td>56</td></tr>
+			<tr><td>test3</td> <td>男</td> <td>56</td></tr>
+		</table>
+		<h4 align="center">小说采集案列</h4>
+		<table align="center" border="1" cellpadding="10" cellspacing="0" width="700">
+			<thead><!-- 表单头部区域，可以更好的分清表格结构 -->
+			<tr>
+				<th>排名</th>
+				<th>关键词</th>
+				<th>趋势</th>
+				<th>今日搜索</th>
+				<th>最近七日</th>
+				<th>相关链接</th>
+			</tr>
+			</thead>
+			<tbody><!-- 表单主体区域，可以更好的分清表格结构 -->
+			<tr>
+				<td>1</td>
+				<td>鬼吹灯</td>
+				<td><img src="images/xia.png" width="50"></td>
+				<td>345</td>
+				<td>123</td>
+				<td><a href="#">贴吧</a>&nbsp;<a href="#">图片</a>&nbsp;<a href="#">百科</a></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>盗墓笔记</td>
+				<td><img src="images/shang.png" width="50"></td>
+				<td>124</td>
+				<td>2545</td>
+				<td><a href="#">贴吧</a>&nbsp;<a href="#">图片</a>&nbsp;<a href="#">百科</a></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>西游记</td>
+				<td><img src="images/xia.png" width="50"></td>
+				<td>3405</td>
+				<td>123</td>
+				<td><a href="#">贴吧</a>&nbsp;<a href="#">图片</a>&nbsp;<a href="#">百科</a></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>东宫记</td>
+				<td><img src="images/shang.png" width="50"></td>
+				<td>345</td>
+				<td>123</td>
+				<td><a href="#">贴吧</a>&nbsp;<a href="#">图片</a>&nbsp;<a href="#">百科</a></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>甄嬛传</td>
+				<td><img src="images/xia.png" width="50"></td>
+				<td>345</td>
+				<td>123</td>
+				<td><a href="#">贴吧</a>&nbsp;<a href="#">图片</a>&nbsp;<a href="#">百科</a></td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>水浒传</td>
+				<td><img src="images/shang.png" width="50"></td>
+				<td>345</td>
+				<td>123</td>
+				<td><a href="#">贴吧</a>&nbsp;<a href="#">图片</a>&nbsp;<a href="#">百科</a></td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>三国演义</td>
+				<td><img src="images/shang.png" width="50"></td>
+				<td>345</td>
+				<td>123</td>
+				<td><a href="#">贴吧</a>&nbsp;<a href="#">图片</a>&nbsp;<a href="#">百科</a></td>
+			</tr>
+			</tbody>
+		</table>
+		
+		<h1 align="center" id="seven">合并单元格</h1>
+		<h4 align="center">跨行合并：rowspan="合并单元格的个数"。最上侧单元格为目标单元格，写合并代码</h4>
+		<h4 align="center">跨列合并：colspan="合并单元格的个数"。最左侧单元格为目标单元格，写合并代码</h4>
+		<p align="center"> <a href="#top" target="_self">返回顶部</a></p>
+		<p align="center">练习：</p>
+		<table align="center" cellpadding="10"  cellspacing="0" border="1" width="500" height="250">
+			<!-- align="center":居中显示 align属性值分别对应：left（左。默认为左） center（中） rigth（右）
+			cellpadding：控制文字与单元格之间的距离 cellspacing:控制单元格之间的空白距离
+			border:显示边框，默认为空就不显示表格边框 width:宽 height:高
+			-->
+			<tbody><!-- 表单主体区域，可以更好的分清表格结构。此表单没有用到表单头部(thead：表单头部区域，可以更好的分清表格结构)-->
+			<tr>
+				<td rowspan="3" align="center">Header</td>
+				<td colspan="2" align="center">Header</td>
+				<!-- <td>Header</td> -->
+			</tr>
+			<tr>
+				<!-- <td>Data</td> -->
+				<td colspan="2" align="center">Data</td>
+				<!--align属性值分别对应：left（左。默认为左） center（中） rigth（右）-->
+			</tr>
+			<tr>
+				<!-- <td>Data</td> -->
+				<td align="center">Data</td>
+				<td align="center">Data</td>
+			</tr>
+			</tbody>
+		</table>
+		
+		<h1 id="eight" >列表标签</h1>
+		<a href="#top" target="_self">返回顶部</a><br>
+		表格是用来显示数据的，那么列表就是用来布局的，列表最大的特点就是整齐、简洁、有序、它作为布局会更加自由方便。
+		列表可以分为三大类：<br>
+		1、无序列表<br>
+		2、有序列表<br>
+		3、自定义列表<br>
+		<img src="images/列表.png"><br>
+		<h4 align="left">'无序列表'演示：</h4>
+		<h4>注意：<br>
+		ul 里面只能嵌套 li 标签，不能出现其他的标签<br>
+		li 相当于一个容器，可以嵌套所有标签<br>
+		无序列表会带有自己的样式属性，实际使用时可以使用css来设置
+		</h4>
+		<h4>你喜欢的小说？</h4>
+		<ul>
+			<li>小姨子上门记</li>
+			<li>斗罗大陆</li>
+			<li>斗破苍穹</li>
+		</ul>
+		<h4>有序列表，会自动在在前面加上数字顺序（理解）</h4>
+		<h4>有序列表演示：</h4>
+		<h4>注意：<br>
+		ol 里面只能嵌套 ol 标签，不能出现其他的标签<br>
+		li 相当于一个容器，可以嵌套所有标签<br>
+		有序列表会带有自己的样式属性，实际使用时可以使用css来设置
+		</h4>
+		<h4>粉丝排行榜</h4>
+		<ol>
+			<li>刘德华 粉丝：1000</li>
+			<li>张爱玲 粉丝：100</li>
+			<li>张山峰 粉丝：1</li>
+		</ol>
+		<h4>自定义列表 </h4>
+		<h4>注意：<br>
+		dl标签用于自定义列表，该标签会与dt（自定义项目/名字）和dd（描述每一个项目/名字）一起使用。<br>
+		dl 里面只能嵌套 dt 跟 dd 标签，不能出现其他的标签。dt 跟 dd 里面可以嵌套所有标签。<br>
+		dt跟dd没有数量限制，通常一个dt跟随多个dd<br>
+		<h4>自定义列表演示：</h4>
+		</h4>
+		<dl>
+			<dt>关注我们</dt>
+			<dd>新浪微博</dd>
+			<dd>腾讯微博</dd>
+		</dl>
+		<img src="images/列表总结.png" >
+		
+		<h1 id="nine">表单标签</h1>
+		<a href="#top" target="_self">返回顶部</a><br>
+		<h4>一个完整的表单通常由，表单域、表单空间（或称为表单元素）、提示信息三个部分组成</h4>
+		<img src="images/表单的组成.png" >
+		<p>表单域：form（包含表单元素的区域，会把它范围内的表单元素提交到服务器。）</p>
+		属性名：action 属性值：url地址 描述：提交表单信息到指定的url地址<br>
+		属性名：method 属性值：get/post 描述：数据提交方式<br>
+		属性名：name 属性值：自定义 描述：指定表单名称，区分一个页面中的多个表单域<br>
+		<a href="https://www.jb51.net/w3school/tags/tag_input.htm" target="_blank">input定义和用法</a>
+		
+		<form action="url地址" method="提交方式" name="表单域名称">
+			<p>input 标签用于用户输入后搜集用户信息。<br>
+			根据不同的 type 属性值，输入字段拥有很多种形式。输入字段可以是文本字段、复选框、掩码后的文本控件、单选按钮、按钮等等<br>
+			</p>
+			<p>value="自定义" 表单输入框默认展示文字效果</p>
+			<p>label标签(值为for)用于绑定一个表单元素，当点击label标签里面的文本内容时，会自动转跳到关联的表单元素，增加用户体验</p>
+			<label for="text">用户名：</label><input type="text" name="username"/ value="请输入用户名" id="text"><br>
+			<!-- password:密码框 用户输入时看不见密码 -->
+			<label for="password">密码：</label><input type="password" name="password" id="password"/><br>
+			<!-- radio:单选按钮，可以实现多选一 。name是表单元素名字，这里性别单选按钮必须拥有相同的名字name，才能实现多选1-->
+			<p>单选按钮可以设置checked属性，当页面打开的时候就可以默认选中这个按钮</p>
+			<p>label标签(值为for)用于绑定一个表单元素，当点击label标签里面的文本内容时，会自动转跳到关联的表单元素，增加用户体验</p>
+			性别：
+			<label for="nan">男：</label><input type="radio" name="sex" id="nan" value="男"/> 
+			<label for="nv">女：</label><input type="radio" name="sex" id="nv" value="女"/> 
+			<label for="ren">人妖：</label><input type="radio" name="sex" checked="checked" id="ren" value="人妖"/><br>
+			<p>复选框（多选框）可以设置checked属性，当页面打开的时候就可以默认选中这个按钮</p>
+			<!-- checkbox:复选框（多选框）name是表单元素名字，这里性别复选框必须拥有相同的名字name 可以实现多选 -->
+			爱好：吃饭<input type="checkbox" name="aihao" value="吃饭"/> 睡觉<input type="checkbox" name="aihao" value="睡觉"/> 打豆豆<input type="checkbox" name="aihao" value="打豆豆"/>
+			<br>
+			<!-- file：文件域  上传文件使用-->
+			上传头像：<input type="file"/>
+			<h4>select:下拉表单元素</h4>
+			地址：
+			<select name="dizhi" id="dizhi">
+				<option>四川</option>
+				<option selected="selected">北京</option>
+				<option value ="huoxing">火星</option><!-- 添加value后提交数据时就会以value的值为准 -->
+			</select>
+			<p>select里面至少包含一对opthon标签</p>
+			<p>在option中定义slected='slected'时，当前项就为默认项目。</p>
+			
+			<h4>textarea:用于多行文本输入的控件（大型的文本输入框）</h4>
+			<p>clos：每行中显示的字符 rows：显示的行数（不用记，实际开发使用css来改变大小）</p>
+			个人介绍：
+			<textarea rows="5" cols="30" >
+				来一段精彩的自我介绍吧
+			</textarea>
+			<br>
+			<input type="submit" value="提交注册" />
+			<input type="reset" value="重置" />
+			<h2>注意：<br>
+			name和value是每个表单都必须有的属性值，主要是给后端人员使用<br>
+			name表单元素的名字，要求单选框跟复选框（多选框）都要有相同的name值<br>
+			</h2>
+			<!-- 各种元素控件 -->
+		</form>
+		
+		<!-- 注册页面 -->
+		<h1>日常搏一搏，女神变老婆</h1>
+		<form action="url" method="get">
+		<table width="600"  border="1">
+		<tr>
+			<td>性别：</td>
+			<td>
+				<label for="nan1">男</label><input type="radio" name="sex" id="nan1" value="男" />
+				<label for="nv1">女</label><input type="radio" name="sex" id="nv1" value="女" />
+			</td>
+		</tr>
+		<tr>
+			<td>生日</td>
+			<td><select name="nian">
+				<option value="1998" selected="selected">--请选择年--</option>
+				<option value="1998">1997</option>
+				<option value="1998">1998</option>
+				<option value="1999">1999</option>
+				<option value="2000">2000</option>
+				</select>
+				<select name="yue">
+				<option selected="selected">--请选择月--</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				</select>
+				<select name="ri">
+				<option selected="selected">--请选择日--</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>所在地区</td>
+			<td><input type="text" name="diqu" id="" value="输入详细地址" /></td>
+		</tr>
+		<tr>
+			<td>婚姻状况</td>
+			<td>
+				<label for="weihun">未婚</label><input type="radio" name="marriage" id="weihun" value="未婚" />
+				<label for="yihun">已婚</label><input type="radio" name="marriage" id="yihun" value="已婚" />
+			</td>
+		</tr>
+		<tr>
+			<td>学历</td>
+			<td><input type="text" name="xueli" value="幼儿园" /></td>
+		</tr>
+		<tr>
+			<td>喜欢类型</td>
+			<td>
+				<label for="keai">可爱的</label><input type="checkbox" name="type" id="keai" value="可爱的" />
+				<label for="wenrou">温柔的</label><input type="checkbox" name="type" id="wenrou" value="温柔的" />
+				<label for="wumei">妩媚的</label><input type="checkbox" name="type" id="wumei" value="妩媚的" />
+				<label for="douxihuan">都喜欢</label><input type="checkbox" name="type" id="douxihuan" value="都喜欢"  checked="checked"/>
+			</td>
+		</tr>
+		<tr>
+			<td>自我介绍</td>
+			<td><textarea rows="5" cols="30">
+				来一段精彩的自我介绍吧
+			</textarea></td>
+		</tr>
+				<tr>
+					<td><input type="submit" value="免费注册"/></td>
+					<td><input type="reset" value="重新填写" /></td>
+				</tr>
+		</table>
+		<input type="checkbox" checked="checked"/>我同意会员注册条款<br>
+		<a href="#">我是会员，立即登录</a>
+		</form>
+		<h1>我承诺</h1>
+		<ul>
+			<li>年满18岁、单身</li>
+			<li>抱着严肃的态度</li>
+			<li>真诚寻找另一半</li>
+		</ul>
+	</body>
+</html>

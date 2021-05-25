@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css复合选择器</title>
+		<link rel="stylesheet" href="css/css复合选择器.css"/>
+	</head>
+	<body>
+		<h1>什么时复合选择器</h1>
+		在css中，可以根据选择器类型，把选择器分为，基础选择器和复合选择器，复合选择器是建立在基础选择器之上，对基础选择器组合形成的<br>
+		1.复合选择器可以更精准、高效的选择目标元素（标签）<br>
+		2.复合选择器是由两个或者多个基础选择器通过不同方式组合而成的<br>
+		3.常用的复合选择器包括：后代选择器、子选择器、并集选择器、伪类选择器等<br>
+		
+		
+		<h1>后带选择器（重要）</h1>
+		后代选择器又成为包含选择器，可以选择父元素里面的子元素。<br>
+	
+		语法：<br>
+		父元素 子元素{<br>
+			样式声明<br>
+		}<br>
+		例如：<br>
+		<ul>
+			<li>我是ul的子级</li>
+			<li>我是ul的子级</li>
+			<li>我是ul的子级</li>
+			<li><a href="#">我是ul下li的子级</a></li>
+		</ul>
+		<ul class="rod">
+			<li>我是ul的子级</li>
+			<li>我是ul的子级</li>
+			<li>我是ul的子级</li>
+			<li><a href="#">我是ul下li的子级</a></li>
+		</ul>
+		<ol>
+			<li>我是ol的子级</li>
+			<li>我是ol的子级</li>
+			<li>我是ol的子级</li>
+		</ol>
+		css代码：<br>
+		ul li {/* 后代选择器 */<br>
+			color: #FF0000;<br>
+		}<br>
+		
+		ul li a {/* 后代选择器 */<br>
+			color: #FFFF7F;<br>
+		}<br>
+		ol li{<br>
+			color: blue;<br>
+		}<br>
+		.rod li a {/* 类选择器 */<br>
+			color: #00FFFF;<br>
+		}<br>
+		
+		
+		<h1>子选择器（重要）</h1>
+		语法：<br>
+		元素1>元素2{样式声明}<br>
+		例如：<br>
+		div>a{样式声明}/* 选择div里面所有最近一级的a标签元素 */<br>
+		<div class="top">
+			<a href="#">我是儿子</a>
+			<p>
+				<a href="#">我是孙子</a>
+			</p>
+		</div>
+		div>a {/* 子选择器 */<br>
+			color: #ffaa00;<br>
+		}<br>
+		元素2必须是亲儿子，其亲儿子下所有的类都不管。<br>
+		
+		
+		<h1>并集选择器（重要）</h1>
+		并集选择器可以选择多组标签，并且可以为他们定义相同的样式。
+		并集选择器是各种选择器通过英文逗号（,）连接形成，任何选择器都可以作为并集选择器的一部分。
+		语法：
+		元素1,元素2{声明样式}
+		例如：
+		div,p{样式声明}
+		或者：
+		div,p,.ptt（类选择器）{样式声明}
+		案列：把熊大熊二小猪一家改为粉色
+		<div>熊大</div>
+		<p>熊二</p>
+		<span>光头强</span>
+		<ul class="ttp">
+			<li>小猪佩奇</li>
+			<li>猪妈</li>
+			<li>猪爸</li>
+		</ul>
+		css语法<br>
+		/* 并集选择器 */<br>
+		div,p,.ttp{/* 跟后代选择器颜色冲突，懒得改 */<br>
+			color: pink;<br>
+		}<br>
+		<h1>链接伪类选择器</h1>
+		a:link 设置a对象在未被访问前的样式表属性 <br>
+		a:visited 设置a对象在其链接地址已被访问过时的样式表属性 <br>
+		a:hover 设置对象在其鼠标悬停时的样式表属性 <br>
+		a:active 设置对象在被用户激活（在鼠标点击与释放之间发生的事件）时的样式表属性 <br>
+		注意：为了确保生效，需要按照LVHA顺序声明
+		语法<br>
+		a:hover{<br>
+			color: #DEB887;<br>
+		}<br>
+		
+		
+		<h1>focus伪类选择器（表单）</h1>
+		focus伪类选择器用于获取焦点的表单元素<br>
+		焦点就是光标，一般情况input类表单元素才能获取，因此整个选择器主要针对input表单元素、<br>
+		语法：<br>
+		input:focus{声明样式}
+		如：<br>
+		<input type="text" />
+		<input type="text" />
+		<input type="text" /><br>
+		<img src="images/复合选择器总结.png" >
+	</body>
+</html>
