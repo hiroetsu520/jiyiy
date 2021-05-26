@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css盒子模型</title>
+		<style type="text/css">
+/* 			.div1{
+				width: 300px;
+				height: 300px;
+				border-width: 2px;
+				border-style: solid;
+				border-color: #FF0000;
+			} */
+			/* 四条边框不同颜色，不同粗细*/
+			.div1{
+				width: 300px;
+				height: 300px;
+				border-top: #0000FF 10px;/* 上 */
+				border-left: #FF0000 20px;/* 左 */
+				border-right: #FF6F00 30px;/* 右 */
+				border-bottom: #FFC0CB 40px;/* 底部（下） */
+				/* 边框宽 */
+				/* border-width: 2px; */
+				border-style: solid;/* 边框样式 */
+			}
+			
+			/* 盒子模型内边距（padding） */
+			.div2{
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				padding-top: 15px;
+				padding-left: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>边框(border)</h1>
+		border : border-width(边框宽度) || border-style(边框样式) || border-color (边框颜色)<br>
+		<h1>可以使用简写如:border: 2px solid #fff;(没有前后顺序)</h1>
+		<h1>合并边框</h1>
+		border-collapse: collapse;<br>
+		<h1>边框分开写法</h1>
+		注意：采用简写可以更好的控制四个边框的不同样式<br>
+		如:<br>
+			/* 四条边框不同颜色，不同粗细*/
+			.div1{<br>
+				width: 300px;<br>
+				height: 300px;<br>
+				border-top: #0000FF 10px;/* 上+边框 */<br>
+				border-left: #FF0000 20px;/* 左+边框 */<br>
+				border-right: #FF6F00 30px;/* 右+边框 */<br>
+				border-bottom: #FFC0CB 40px;/* 底部（下）+边框 */<br>
+				/* 边框宽 */<br>
+				/* border-width: 2px; */<br>
+				border-style: solid;/* 边框样式 */<br>
+			}<br>
+		<div class="div1">
+		</div>
+		
+		<h1>盒子模型内边距（padding）</h1>
+		padding-top 上
+		padding-bottom 下
+		padding-left 左
+		padding-right 右
+		如：
+		<div class="div2">
+			盒子内容是content 盒子内容是content 盒子内容是content 盒子内容是content
+		</div>
+		<h1>padding属性简写（重要）</h1>
+		<img src="images/padding属性简写.png" ><br>
+	</body>
+</html>

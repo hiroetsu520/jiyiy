@@ -1,0 +1,13 @@
+	/* 小说采集案列 */
+	#biaoge{
+		width: 500px;
+		height: 120px;
+	}
+	#te1 th{
+	height: 35px;	
+	}
+	#biaoge,td,th{
+		border:1px solid pink;
+		text-align: center;
+		border-collapse: collapse;
+	}
