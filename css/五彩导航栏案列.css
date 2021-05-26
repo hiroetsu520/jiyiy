@@ -1,4 +1,4 @@
-.div1 a{
+	.div1 a{
 		display: inline-block;
 		text-decoration: none;
 		width: 120px;
@@ -10,22 +10,27 @@
 	} 
 	.bg1{
 		background: url(../images/sucai/bg5.png);
-		background-repeat: no-repeat;
 	}
 	.div1 .bg1:hover {
 		background-image: url(../images/sucai/bg1.png);
 	}
 	.bg2{
 		background-image: url(../images/sucai/bg2.png);
-		background-repeat: no-repeat;
+	}
+	.div1 .bg2:hover {
+		background-image: url(../images/sucai/bg1.png);
 	}
 	.bg3{
 		background-image: url(../images/sucai/bg3.png);
-		background-repeat: no-repeat;
+	}
+	.div1 .bg3:hover {
+		background-image: url(../images/sucai/bg1.png);
 	}
 	.bg4{
 		background-image: url(../images/sucai/bg4.png);
-		background-repeat: no-repeat;
+	}
+	.div1 .bg4:hover {
+		background-image: url(../images/sucai/bg1.png);
 	}
 	
 	
