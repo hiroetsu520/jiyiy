@@ -2,6 +2,9 @@
 		margin: 0;
 		padding: 0;
 	}
+	div{
+		display: inline-block;
+	}
 	body{
 		background-color: #f5f5f5;
 	}
@@ -11,7 +14,7 @@
 		background-color: #ffffff;
 /* 		外边距（margin）可以让盒子水平居中,
 		盒子必须指定宽度（width）盒子左右边距都设置为auto */
-		margin: 50px auto;
+		margin: 50px 35px;
 	}
 	.box img{
 		width: 100%;
@@ -42,8 +45,11 @@
 		display: inline-block;
 		color: #353936;
 		font-weight: 400;
-		margin: 0px 20px 20px 20px;
+		margin: 0px 10px 20px 20px;
 	}
 	.box span{
 		color: #f4a882;
+	}
+	.box .span1{
+		color: #353936;
 	}
