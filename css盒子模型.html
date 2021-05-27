@@ -4,6 +4,13 @@
 		<meta charset="utf-8">
 		<title>css盒子模型</title>
 		<style type="text/css">
+			/* 清除内外边距 也是css的第一行代码*/
+			*{
+				margin: 0;/* 清除外边距 */
+				padding: 0;/* 清除内边距 */	
+			}
+			
+			
 /* 			.div1{
 				width: 300px;
 				height: 300px;
@@ -32,14 +39,38 @@
 				padding-top: 15px;
 				padding-left: 20px;
 			}
+			
+			
+			/* 使用嵌套块元素垂直外边距塌陷问题（按照这种写法就会倒是两个盒子一起下移） */
+			.div3{
+				width: 500px;
+				height: 500px;
+				background-color: #FF6F00;
+				margin-top: 50px;/* 让盒子外边距下移50px */
+				/* 解决方案1:可以为父元素定义上边框（或者四个边都行） */
+				/* border: 1px solid transparent; */
+				/* 解决方案2:可以为父元素定义上内边框 */
+				/* padding: 1px; */
+				/* 解决方案3:可以为父元素添加overflow:hidden; */
+				overflow: hidden;/* 这种方法不会改变盒子原本大小 */
+			}
+			.div4{
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				margin-top: 50px;/* 让盒子外边距下移50px */
+			}
 		</style>
 	</head>
 	<body>
 		<h1>边框(border)</h1>
 		border : border-width(边框宽度) || border-style(边框样式) || border-color (边框颜色)<br>
+		
 		<h1>可以使用简写如:border: 2px solid #fff;(没有前后顺序)</h1>
+		
 		<h1>合并边框</h1>
 		border-collapse: collapse;<br>
+		
 		<h1>边框分开写法</h1>
 		注意：采用简写可以更好的控制四个边框的不同样式<br>
 		如:<br>
@@ -59,15 +90,75 @@
 		</div>
 		
 		<h1>盒子模型内边距（padding）</h1>
-		padding-top 上
-		padding-bottom 下
-		padding-left 左
-		padding-right 右
-		如：
+		padding-top 上<br>
+		padding-bottom 下<br>
+		padding-left 左<br>
+		padding-right 右<br>
+		如：<br>
 		<div class="div2">
 			盒子内容是content 盒子内容是content 盒子内容是content 盒子内容是content
 		</div>
 		<h1>padding属性简写（重要）</h1>
 		<img src="images/padding属性简写.png" ><br>
+		
+		<h1>盒子模型外边距（margin）</h1>
+		margin-top 上<br>
+		margin-bottom 下<br>
+		margin-left 左<br>
+		margin-right 右<br>
+		<h1>margin属性简写（重要）</h1>
+		<h1>margin（外边距）简写跟padding一样，可以直接参考padding（内边距）</h1>
+		<img src="images/padding属性简写.png" ><br>
+		
+		<h1>让块元素盒子水平居中</h1>
+		外边距（margin）可以让盒子水平居中，但是得满足两个条件：<br>
+		1.盒子必须指定宽度（width）<br>
+		2.盒子左右边距都设置为auto<br>
+		.div1{<br>
+			width:300px;<br>
+			margin:0 auto;(上下边距为0，左右边距为auto)<br>
+		}<br>
+		<img src="images/块元素盒子水平居中.png" ><br>
+		<h1>让行内元素或者行内块元素水平居中</h1>
+		<h3>直接给（父级）添加text-align:center;即可</h3>
+		
+		<h1>使用嵌套块元素垂直外边距塌陷问题</h1>
+		<h4>对于两个嵌套关系（父子关系）得块元素，父元素有上边距同事子元素也有上边距，此时父元素会塌陷</h4>
+		解决方案：
+		1.可以为父元素定义一个上边框
+		2.可以为父元素定义一个内边框
+		3.可以为父元素添加overflow:hidden;
+		案列：
+		<div class="div3">
+			<div class="div4">
+			</div>
+		</div>
+		<h3>css代码</h3>
+		/* 使用嵌套块元素垂直外边距塌陷问题（按照这种写法就会倒是两个盒子一起下移） */<br>
+		.div3{<br>
+			width: 500px;<br>
+			height: 500px;<br>
+			background-color: #FF6F00;<br>
+			margin-top: 50px;/* 让盒子外边距下移50px */<br>
+			/* 解决方案1:可以为父元素定义上边框（或者四个边都行） */<br>
+			/* border: 1px solid transparent; */<br>
+			/* 解决方案2:可以为父元素定义上内边框 */<br>
+			/* padding: 1px; */<br>
+			/* 解决方案3:可以为父元素添加overflow:hidden; */<br>
+			overflow: hidden;/* 这种方法不会改变盒子原本大小 */<br>
+		}<br>
+		.div4{<br>
+			width: 200px;<br>
+			height: 200px;<br>
+			background-color: pink;<br>
+			margin-top: 50px;/* 让盒子外边距下移50px */<br>
+		}<br>
+		
+		<h1>清除内外边距 也是css的第一行代码</h1>
+			/* 清除内外边距 也是css的第一行代码*/<br>
+			*{<br>
+				margin: 0;/* 清除外边距 */<br>
+				padding: 0;/* 清除内边距 */	<br>
+			}<br>
 	</body>
 </html>
