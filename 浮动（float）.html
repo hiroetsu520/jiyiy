@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>浮动（float）</title>
+		<style type="text/css">
+			/* 靠左浮动 */
+			.box{
+				width: 300px;
+				height: 200px;
+				background-color: pink;
+				float: left;
+			}
+			/* 靠右浮动 */
+			.box1{
+				width: 300px;
+				height: 200px;
+				background-color: pink;
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>标准流</h1>
+		所谓的标准流：就是标签按照默认的方式排序。<br>
+		<h1>为什么需要浮动</h1>
+		总结：很多布局样式用标准流没有办法完成，此时可以利用浮动完成布局，因为浮动可以改变元素标签默认的排序方式。<br>
+		浮动最典型的应用：可以让多个块元素一行排序显示。<br>
+		<h1>网页布局第一准则（重要）：多个块元素纵向排列找 标准流 ，多个块元素横向排列找 浮动。</h1>
+		<h1>浮动（float）</h1>
+		<h1>语法：</h1>
+		<h2>选择器{ float:属性值;}</h2>
+		 值	     描述<br>
+		left	元素向左浮动。<br>
+		right	元素向右浮动。<br>
+		none	默认值。元素不浮动，并会显示在其在文本中出现的位置。<br>
+		inherit	规定应该从父元素继承 float 属性的值。<br>
+		float属性用于浮动框，将其移动到一边，直到左边边缘或者右边边缘触及包含块或一个浮动边缘。<br>
+		案例：<br>
+		/* 靠左浮动 */<br>
+		.box{<br>
+			width: 300px;<br>
+			height: 200px;<br>
+			background-color: pink;<br>
+			float: left;<br>
+		}<br>
+		/* 靠右浮动 */<br>
+		.box1{<br>
+			width: 300px;<br>
+			height: 200px;<br>
+			background-color: pink;<br>
+			float: right;<br>
+		}<br>
+		<br><br>
+		<div class="box">box</div>
+		<div class="box1">box1</div>
+	</body>
+</html>

@@ -11,9 +11,27 @@
 /* 				外边距（margin）可以让盒子水平居中，但是得满足两个条件：<br>
 				1.盒子必须指定宽度（width）<br>
 				2.盒子左右边距都设置为auto<br> */
-				margin: 100 auto;
-				
+				margin: 100px auto;
+				/* 颜色可以改为半透明：rgba(0,0,0,0.3) 最后一位取值0-1表示透明程度 */
+				box-shadow: 10px 10px 10px 10px #000000;
 			}
+			
+			/* 鼠标经过盒子显示阴影 */
+			.box1{
+							width: 200px;
+							height: 200px;
+							background-color: pink;
+			/* 				外边距（margin）可以让盒子水平居中，但是得满足两个条件：<br>
+							1.盒子必须指定宽度（width）<br>
+							2.盒子左右边距都设置为auto<br> */
+							margin: 100px auto;
+							
+						}
+			.box1:hover{
+				/* 颜色可以改为半透明：rgba(0,0,0,0.3) 最后一位取值0-1表示透明程度 */
+				box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.3);
+			}
+			
 		</style>
 	</head>
 	<body>
@@ -25,6 +43,11 @@
 		spread	可选。阴影的尺寸。	<br>
 		color	可选。阴影的颜色。<br>
 		inset	可选。将外部阴影 (outset) 改为内部阴影。<br>
+		注意：默认是外阴影（outset），但是不能写整个值，否则无效。<br>
+		盒子阴影不占空间，不会影响其他盒子排列。<br>
+		<br><br>
 		<div class="box"></div>
+		<h1>鼠标经过盒子显示阴影</h1>
+		<div class="box1"></div>
 	</body>
 </html>
