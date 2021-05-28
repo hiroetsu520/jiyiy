@@ -34,22 +34,23 @@
 		display: inline-block;
 		text-decoration: none;
 		color: #353936;
-		margin: 0px 20px 20px 20px;
+		margin: 0px 10px 20px 20px;
 	}
 	.box .p1{
 		display: inline-block;
 		color: #0000FF;
-		margin-left: ;
 	}
 	.box h4{
 		display: inline-block;
 		color: #353936;
 		font-weight: 400;
-		margin: 0px 10px 20px 20px;
+		margin: 0px 5px 1px 0px;
 	}
-	.box span{
+	.box .div2 .span2{
 		color: #f4a882;
 	}
-	.box .span1{
+	.box .div2 em{
 		color: #353936;
+		font-style: normal;
+		
 	}

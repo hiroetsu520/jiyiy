@@ -1,0 +1,41 @@
+	/* css初始代码,清除内边距跟外边距的默认距离 */
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	
+	/* 去掉li前面的小圆点 */
+	li{
+		/* 去掉li前面的小圆点 */
+		list-style: none;
+	}
+	/* div整体大盒子 */
+	.box{
+		width: 300px;
+		height: 150px;
+		border: 1px solid #CCCECE;
+		margin: 100px auto;
+/* 		外边距（margin）可以让盒子水平居中，但是得满足两个条件：
+		1.盒子必须指定宽度（width）
+		2.盒子左右边距都设置为auto */
+	}
+	.box h4{
+		border-bottom: 1px dashed #666;/* 设置边框为1px,样式为虚线，颜色 */
+		font-weight: 400;
+		padding-left: 15px;
+	}
+	.box ul li{
+		height: 23px;
+		line-height: 23px;
+		padding-left: 20px;
+	}
+	.box ul li a{
+		text-decoration: none;
+		color: #666;
+	}
+	.box ul li a:hover{
+		text-decoration: underline;
+	}
+	.box ul{
+		margin-top: 7px;
+	}
