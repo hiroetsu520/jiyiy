@@ -30,7 +30,7 @@
 		color: #b0b0b0;
 		font-size: 12px;
 		line-height: 50px;
-		margin-right: 50px;
+		margin-left: 40px;
 	}
 	.top .li a:hover{
 		color: #ffffff;
@@ -109,7 +109,7 @@
 	.header .zhong{
 		width: 1226px;
 		height: 170px;
-		background-color: #0000FF;
+		/* background-color: #0000FF; */
 		margin-top: 10px;
 		margin-bottom: 10px;
 		font-size: 10px;
@@ -234,3 +234,28 @@
 		line-height: 63.6px;
 		/* margin: 10px; */
 	}
+	.zhong .zhong-1, .zhong-2, .zhong-3{
+		float: left;
+		width: 316px;
+		height: 170px;
+		background-color: #ff5500;
+		margin-left: 14.5px;
+		font-size: 40px;
+	}
+	.zhong .zhong-1 img{
+		width: 316px;
+		height: 170px;
+	}
+	.zhong .zhong-2 img{
+		width: 316px;
+		height: 170px;
+	}
+	.zhong .zhong-3 img{
+		width: 316px;
+		height: 170px;
+	}
+	#bo{
+		width: 1226px;
+		height: 120px;
+	}
+	

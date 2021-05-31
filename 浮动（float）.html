@@ -18,6 +18,31 @@
 				background-color: pink;
 				float: right;
 			}
+			/* 清除浮动（父盒子调用） */
+			.clearfix{
+				content: "";
+				display: block;
+				height: 0;
+				clear: both;
+				visibility: hidden;
+			}
+			.clearfix{
+				/* ie6,7专用 */
+				*zoom: 1;
+			}
+			
+			/* 清除浮动2（父盒子调用） */
+			.clearfix::before,.clearfix:after{
+			content: "";
+				display: table;
+			}
+			.clearfix::after{
+				clear: both;
+			}
+			.clearfix{
+				/* ie6,7专用 */
+				*zoom: 1;
+			}
 		</style>
 	</head>
 	<body>
@@ -67,5 +92,60 @@
 		任何元素都可以浮动，不管原先是什么模式的元素，添加浮动之后都具有行内块元素相似的特性。</h3>
 		<h1>浮动与原始经常和标准流父级搭配使用</h1>
 		<h3>先用标准流的父级元素位列上下位置，之后内部子元素采取浮动排列左右位置，复合网页布局第一准则</h3>
+		
+		<h1>浮动布局注意点</h1>
+		<h3>1.浮动和标准流的父盒子搭配</h3>
+		<p>先用标准流的父元素排列上下位置，之后内部子元素采取浮动排列左右位置</p>
+		<h3>一个元素浮动了，理论上其余的兄弟元素也要浮动。</h3>
+		<p>浮动的盒子只会影响浮动盒子后面的标准流，不会影响前面的标准流。</p>
+		
+		<h1>清除浮动</h1>
+		<h3>为什么需要清除浮动？</h3>
+		由于父级盒子很多情况下不方便给高度，但是子盒子浮动又不占用位置，最后父级盒子高度为0时，就会影响下面的标准流盒子。<br>
+		
+		<h1>清除浮动方法</h1>
+		<h3>额外标签法（clear），也称为 隔墙法，时w3c推荐的做法</h3>
+		额外标签法，会在浮动元素末尾添加一个空标签，如：<br>
+		【div style="clear:both">/div】<br>
+		注意：要求这个新的空标签必须时块级元素！<br>
+		优点：通俗易懂，方便书写<br>
+		缺点：添加许多无意义的标签，结构化差<br>
+		
+		<h3>父级添加overflow</h3>
+		可以给父级添加overflow属性，将值设置为hidden scroll	或auto。<br>
+		注意：是给父元素添加。<br>
+		优点：代码简洁<br>
+		缺点：无法显示溢出部分<br>
+		
+		<h3>:after伪元素（父盒子调用）</h3>
+		代码：<br>
+		/* 清除浮动（父盒子调用） */<br>
+		.clearfix{<br>
+			content: "";<br>
+			display: block;<br>
+			height: 0;<br>
+			clear: both;<br>
+			visibility: hidden;<br>
+		}<br>
+		.clearfix{<br><br>
+			/* 兼容ie6,7专用 */<br>
+			*zoom: 1;<br>
+		}<br>
+		
+		<h3>双伪元素清除浮动</h3>
+		代码：<br>
+		/* 清除浮动2（父盒子调用） */<br>
+		.clearfix::before,.clearfix:after{<br>
+		content: "";<br>
+			display: table;<br>
+		}<br>
+		.clearfix::after{<br>
+			clear: both;<br>
+		}<br>
+		.clearfix{<br>
+			/* ie6,7专用 */<br>
+			*zoom: 1;<br>
+		}<br>
+		<img src="images/清除浮动总结.png" ><br>
 	</body>
 </html>
