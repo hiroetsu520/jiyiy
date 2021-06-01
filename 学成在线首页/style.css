@@ -29,4 +29,7 @@ a{
 }
 .top ul li{
 	float: left;
+	height: 44px;
+	line-height: 44px;
+	padding: 0 20px;
 }
